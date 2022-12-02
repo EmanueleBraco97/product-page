@@ -82,3 +82,26 @@ h2 {
   color: #b6bcc8;
   text-decoration: line-through;
 }
+
+.add-implement-cart {
+  display: flex;
+}
+
+.add-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #ff7d1a;
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.quantity {
+  display: flex;
+}
