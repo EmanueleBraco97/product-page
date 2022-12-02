@@ -13,8 +13,8 @@
 }
 
 .img-product {
-  width: 250px;
-  height: 250px;
+  width: 365px;
+  height: 330px;
   border-radius: 10px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .little-photo {
-  width: 100px;
+  width: 80px;
   border-radius: 10px;
 }
 
@@ -35,6 +35,11 @@
 }
 
 h1 {
+  font-size: 16px;
+  color: #ff7d1a;
+}
+
+h2 {
   width: 250px;
 }
 
@@ -44,9 +49,36 @@ h1 {
 }
 
 .price-discount {
-  font-size: 20px;
-  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.structure-price-discount {
   display: flex;
   justify-content: space-between;
   width: 150px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.discount-box {
+  width: 50px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #ffede0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount {
+  color: #ff7d1a;
+  font-size: 16px;
+}
+
+.old-price {
+  font-weight: bold;
+  color: #b6bcc8;
+  text-decoration: line-through;
 }

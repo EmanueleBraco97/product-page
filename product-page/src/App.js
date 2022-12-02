@@ -1,5 +1,5 @@
 import "./App.css";
-import DataProduct from "./components/DataProduct";
+import DataProduct from "../src/components/DataProduct/DataProduct";
 
 function App() {
   return (
