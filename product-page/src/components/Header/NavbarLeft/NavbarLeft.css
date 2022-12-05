@@ -1,0 +1,21 @@
+.nav-left {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  column-gap: 15px;
+}
+
+li {
+  color: #b6bcc8;
+  cursor: pointer;
+}
+
+li:hover {
+  color: black;
+}

@@ -1,7 +1,10 @@
 import { useState, useContext, useEffect } from "react";
-import data from "../../data";
-import { Cartcontext } from "../../context/Context";
-import Cart from "../Cart/Cart";
+import data from "../../../data";
+import { Cartcontext } from "../../../context/Context";
+import Cart from "../../Cart/Cart";
+
+import iconPlus from "../../../img/icon-plus.svg";
+import iconMinus from "../../../img/icon-minus.svg";
 
 import "./DataProduct.css";
 
@@ -16,11 +19,11 @@ const DataPhoto = () => {
   const dispatch = Globalstate.dispatch;
 
   return (
-    <div>
+    <>
       {product.map((item, index) => {
-        item.quantity = 1;
+        item.quantity = 0;
         return (
-          <div className="card-container" key={index}>
+          <main className="card-container" key={index}>
             <section className="img-product-left">
               <img
                 className="img-product"
@@ -58,7 +61,9 @@ const DataPhoto = () => {
               <p className="description">{item.description}</p>
               <div className="price-discount">
                 <div className="structure-price-discount">
-                  <p className="price">${item.price}.00</p>
+                  <p style={{ margin: "0" }} className="price">
+                    ${item.price}.00
+                  </p>
                   <div className="discount-box">
                     <p className="discount">{item.discountPercentage}%</p>
                   </div>
@@ -68,14 +73,16 @@ const DataPhoto = () => {
               <section className="add-implement-cart">
                 <div className="quantity">
                   <button
+                    className="button-quantity"
                     onClick={() =>
                       dispatch({ type: "INCREASE", payload: item })
                     }
                   >
-                    +
+                    <img src={iconPlus} alt="plus"></img>
                   </button>
-                  <p>{item.quantity}</p>
+                  <button className="button-quantity">{item.quantity}</button>
                   <button
+                    className="button-quantity"
                     onClick={() => {
                       if (item.quantity > 1) {
                         dispatch({ type: "DECREASE", payload: item });
@@ -84,7 +91,7 @@ const DataPhoto = () => {
                       }
                     }}
                   >
-                    -
+                    <img src={iconMinus} alt="minus"></img>
                   </button>
                 </div>
                 <button
@@ -104,13 +111,13 @@ const DataPhoto = () => {
                   </svg>
                   Add to Cart
                 </button>
-                <Cart />
               </section>
+              <Cart />
             </article>
-          </div>
+          </main>
         );
       })}
-    </div>
+    </>
   );
 };
 

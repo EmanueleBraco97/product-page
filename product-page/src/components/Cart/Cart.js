@@ -16,7 +16,7 @@ const Cart = () => {
           <div className="card" key={index}>
             <img src={item.image} style={{ width: "50px" }} alt="" />
             <p>{item.title}</p>
-            <p>{item.quantity * item.price}</p>
+            <p>${item.quantity * item.price}.00</p>
             <button>Checkout</button>
             <h2 onClick={() => dispatch({ type: "REMOVE", payload: item })}>
               x
@@ -26,7 +26,7 @@ const Cart = () => {
       })}
       {state.length > 0 && (
         <div className="total">
-          <h2>{total}</h2>
+          <h2>${total}.00</h2>
         </div>
       )}
     </div>
