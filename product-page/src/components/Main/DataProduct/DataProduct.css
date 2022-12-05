@@ -24,12 +24,28 @@
   column-gap: 15px;
 }
 
+.little-photo-opacity {
+  width: 80px;
+  border: 3px solid #ff7d1a;
+  border-radius: 10px;
+  opacity: 75%;
+}
+
+.little-photo-opacity:hover {
+  cursor: pointer;
+}
+
 .little-photo {
   width: 80px;
   border-radius: 10px;
 }
 
-.img-product:hover {
+.little-photo:hover {
+  cursor: pointer;
+  opacity: 75%;
+}
+
+.little-photo .img-product:hover {
   cursor: pointer;
 }
 

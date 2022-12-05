@@ -1,7 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import data from "../../../data";
 import { Cartcontext } from "../../../context/Context";
-import Cart from "../../Cart/Cart";
 
 import iconPlus from "../../../img/icon-plus.svg";
 import iconMinus from "../../../img/icon-minus.svg";
@@ -33,7 +32,7 @@ const DataPhoto = () => {
 
               <div className="other-photo-product">
                 <img
-                  className="little-photo"
+                  className="little-photo-opacity"
                   src={item.firstImage}
                   alt="FirstProduct"
                 ></img>
@@ -112,7 +111,6 @@ const DataPhoto = () => {
                   Add to Cart
                 </button>
               </section>
-              <Cart />
             </article>
           </main>
         );

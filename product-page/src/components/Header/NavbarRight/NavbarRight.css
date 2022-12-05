@@ -1,0 +1,32 @@
+.nav-right {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+}
+
+.cart-nav {
+  border: none;
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+.avatar-nav {
+  border: none;
+  background-color: transparent;
+}
+
+.avatar-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.avatar-icon:hover {
+  background-color: #ff7d1a;
+  border-color: #ff7d1a;
+  border-radius: 40%;
+}
