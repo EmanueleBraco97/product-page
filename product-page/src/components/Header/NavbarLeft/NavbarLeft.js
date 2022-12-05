@@ -9,11 +9,21 @@ const NavbarLeft = () => {
       </div>
 
       <ul>
-        <li>Collections</li>
-        <li>Men</li>
-        <li>Women</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>
+          <button>Collection</button>
+        </li>
+        <li>
+          <button>Men</button>
+        </li>
+        <li>
+          <button>Women</button>
+        </li>
+        <li>
+          <button>About</button>
+        </li>
+        <li>
+          <button>Contact</button>
+        </li>
       </ul>
     </nav>
   );

@@ -1,0 +1,22 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+.divisor {
+  border-top: 1px solid #bbb;
+}
+
+.structure-top-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+}

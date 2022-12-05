@@ -7,8 +7,9 @@ import iconMinus from "../../../img/icon-minus.svg";
 
 import "./DataProduct.css";
 
-const DataPhoto = () => {
+const DataProduct = () => {
   const [product, setProduct] = useState(data);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     setProduct((product) => product);
@@ -17,10 +18,37 @@ const DataPhoto = () => {
   const Globalstate = useContext(Cartcontext);
   const dispatch = Globalstate.dispatch;
 
+  const handleIncrement = (index) => {
+    setQuantity((quantity) => quantity + 1);
+    dispatch({
+      type: "ADD",
+      payload: {
+        id: product[index].id,
+        image: product[index].image,
+        title: product[index].title,
+        price: product[index].price,
+        quantity,
+      },
+    });
+  };
+
+  const handleDecrement = (index) => {
+    setQuantity((quantity) => Math.max(quantity - 1, 0));
+    dispatch({
+      type: "DIFF",
+      payload: {
+        id: product[index].id,
+        image: product[index].image,
+        title: product[index].title,
+        price: product[index].price,
+        quantity,
+      },
+    });
+  };
+
   return (
     <>
       {product.map((item, index) => {
-        item.quantity = 0;
         return (
           <main className="card-container" key={index}>
             <section className="img-product-left">
@@ -72,30 +100,38 @@ const DataPhoto = () => {
               <section className="add-implement-cart">
                 <div className="quantity">
                   <button
+                    onClick={() => handleIncrement(index)}
                     className="button-quantity"
-                    onClick={() =>
-                      dispatch({ type: "INCREASE", payload: item })
-                    }
                   >
                     <img src={iconPlus} alt="plus"></img>
                   </button>
-                  <button className="button-quantity">{item.quantity}</button>
-                  <button
+                  <input
+                    onChange={() => setQuantity(quantity)}
+                    value={quantity}
+                    type="text"
                     className="button-quantity"
-                    onClick={() => {
-                      if (item.quantity > 1) {
-                        dispatch({ type: "DECREASE", payload: item });
-                      } else {
-                        dispatch({ type: "REMOVE", payload: item });
-                      }
-                    }}
+                  ></input>
+                  <button
+                    onClick={() => handleDecrement(index)}
+                    className="button-quantity"
                   >
                     <img src={iconMinus} alt="minus"></img>
                   </button>
                 </div>
                 <button
                   className="add-cart"
-                  onClick={() => dispatch({ type: "ADD", payload: item })}
+                  onClick={() =>
+                    dispatch({
+                      type: "ADD",
+                      payload: {
+                        id: item.id,
+                        image: item.image,
+                        title: item.title,
+                        price: item.price,
+                        quantity,
+                      },
+                    })
+                  }
                 >
                   <svg
                     width="22"
@@ -119,4 +155,4 @@ const DataPhoto = () => {
   );
 };
 
-export default DataPhoto;
+export default DataProduct;

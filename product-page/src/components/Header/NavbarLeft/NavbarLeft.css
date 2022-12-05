@@ -3,19 +3,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid gray;
 }
 
 ul {
   list-style: none;
   display: flex;
   column-gap: 15px;
+  margin: 0;
+  align-items: center;
+  height: 100%;
 }
 
 li {
   color: #b6bcc8;
   cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 li:hover {
+  color: black;
+  border-bottom: 4px solid #ff7d1a;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  height: 50px;
+  color: #b6bcc8;
+}
+
+button:hover {
   color: black;
 }

@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Cartcontext } from "../../context/Context";
+import "./Cart.css";
 
 const Cart = () => {
   const Globalstate = useContext(Cartcontext);
@@ -11,23 +12,38 @@ const Cart = () => {
   }, 0);
   return (
     <div className="cart">
-      {state.map((item, index) => {
-        return (
-          <div className="card" key={index}>
-            <img src={item.image} style={{ width: "50px" }} alt="" />
-            <p>{item.title}</p>
-            <p>${item.quantity * item.price}.00</p>
-            <button>Checkout</button>
-            <h2 onClick={() => dispatch({ type: "REMOVE", payload: item })}>
-              x
-            </h2>
-          </div>
-        );
-      })}
-      {state.length > 0 && (
-        <div className="total">
-          <h2>${total}.00</h2>
-        </div>
+      {state.length === 0 ? (
+        <div style={{ display: "none" }} className="card"></div>
+      ) : (
+        state.map((item, index) => {
+          return (
+            <div className="card" key={index}>
+              <h1 style={{ color: "black" }}>Cart</h1>
+              <div className="divisor"></div>
+              <div className="structure-top-card">
+                <img
+                  src={item.image}
+                  style={{ width: "50px", borderRadius: "5px" }}
+                  alt=""
+                />
+                <p>{item.title}</p>
+              </div>
+
+              <p>${item.quantity * item.price}.00</p>
+              <button>Checkout</button>
+              <button
+                onClick={() => dispatch({ type: "REMOVE", payload: item })}
+              >
+                x
+              </button>
+              {state.length > 0 && (
+                <div className="total">
+                  <h3>${total}.00</h3>
+                </div>
+              )}
+            </div>
+          );
+        })
       )}
     </div>
   );
