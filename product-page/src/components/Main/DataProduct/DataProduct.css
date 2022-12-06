@@ -67,12 +67,14 @@ h2 {
 .description {
   font-size: 16px;
   color: #b6bcc8;
+  margin-bottom: 20px;
 }
 
 .price-discount {
   display: flex;
   flex-direction: column;
   margin-bottom: 25px;
+  row-gap: 10px;
 }
 
 .structure-price-discount {

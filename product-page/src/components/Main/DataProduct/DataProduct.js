@@ -11,10 +11,6 @@ const DataProduct = () => {
   const [product, setProduct] = useState(data);
   const [quantity, setQuantity] = useState(1);
 
-  useEffect(() => {
-    setProduct((product) => product);
-  }, []);
-
   const Globalstate = useContext(Cartcontext);
   const dispatch = Globalstate.dispatch;
 
