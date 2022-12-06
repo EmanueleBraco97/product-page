@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { Cartcontext } from "../../context/Context";
 import "./Cart.css";
 
+import cestino from "../../img/icon-delete.svg";
+
 const Cart = () => {
   const Globalstate = useContext(Cartcontext);
   const state = Globalstate.state;
@@ -18,29 +20,41 @@ const Cart = () => {
         state.map((item, index) => {
           return (
             <div className="card" key={index}>
-              <h1 style={{ color: "black" }}>Cart</h1>
+              <h1 className="title-little-cart">Cart</h1>
               <div className="divisor"></div>
               <div className="structure-top-card">
-                <img
-                  src={item.image}
-                  style={{ width: "50px", borderRadius: "5px" }}
-                  alt=""
-                />
-                <p>{item.title}</p>
-              </div>
-
-              <p>${item.quantity * item.price}.00</p>
-              <button>Checkout</button>
-              <button
-                onClick={() => dispatch({ type: "REMOVE", payload: item })}
-              >
-                x
-              </button>
-              {state.length > 0 && (
-                <div className="total">
-                  <h3>${total}.00</h3>
+                <div style={{ display: "flex" }} className="img-btn">
+                  <img
+                    src={item.image}
+                    style={{ width: "50px", borderRadius: "5px" }}
+                    alt=""
+                  />
                 </div>
-              )}
+
+                <div className="quantity-price-cart">
+                  <p style={{ color: "#b6bcc8" }}>{item.title}</p>
+
+                  {state.length > 0 && (
+                    <div
+                      style={{ display: "flex", columnGap: "30px" }}
+                      className="total"
+                    >
+                      <p style={{ color: "#b6bcc8" }}>
+                        ${item.quantity * item.price}.00
+                      </p>
+                      <p style={{ fontWeight: "bold" }}>${total}.00</p>
+                    </div>
+                  )}
+                </div>
+                <button
+                  onClick={() => dispatch({ type: "REMOVE", payload: item })}
+                >
+                  <img src={cestino} alt="cestino"></img>
+                </button>
+              </div>
+              <div className="structure-btn-checkout">
+                <button className="btn-checkout">Checkout</button>
+              </div>
             </div>
           );
         })

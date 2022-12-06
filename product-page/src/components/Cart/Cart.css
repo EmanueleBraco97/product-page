@@ -1,13 +1,21 @@
 .cart {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 80px;
+  left: 150px;
 }
 
 .card {
-  width: 300px;
-  height: 250px;
+  width: 360px;
+  height: 200px;
   border-radius: 10px;
   background-color: gray;
+}
+
+.title-little-cart {
+  color: black;
+  padding: 0px 10px 0px 10px;
 }
 
 .divisor {
@@ -19,4 +27,29 @@
   align-items: center;
   justify-content: space-around;
   margin-top: 10px;
+}
+
+.quantity-price-cart {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+p {
+  margin: 0;
+}
+
+.structure-btn-checkout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-checkout {
+  background-color: #ff7d1a;
+  border-radius: 10px;
+  width: 320px;
+  height: 45px;
+  color: white;
 }

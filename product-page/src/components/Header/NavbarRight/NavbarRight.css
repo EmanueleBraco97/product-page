@@ -5,6 +5,7 @@
   justify-content: center;
   column-gap: 40px;
   border-bottom: 1px solid gray;
+  position: relative;
 }
 
 .cart-nav {
