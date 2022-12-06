@@ -134,9 +134,56 @@ h2 {
 
 .button-quantity {
   width: 40%;
-  height: 40px;
   cursor: pointer;
   background-color: #f7f8fd;
   border-color: #f7f8fd;
   border-radius: 5px;
+  text-align: center;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  .other-photo-product {
+    display: none;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  .img-product-left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .img-product {
+    width: 100%;
+  }
+
+  .info-product-right {
+    width: 100%;
+  }
+
+  .price-discount {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .add-implement-cart {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .quantity {
+    width: 90%;
+  }
+
+  .add-cart {
+    width: 90%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1099px) {
+  .info-product-right {
+    width: 40%;
+  }
 }

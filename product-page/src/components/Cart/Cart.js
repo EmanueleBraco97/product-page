@@ -49,7 +49,7 @@ const Cart = () => {
                 <button
                   onClick={() => dispatch({ type: "REMOVE", payload: item })}
                 >
-                  <img src={cestino} alt="cestino"></img>
+                  <img src={cestino} alt="delete"></img>
                 </button>
               </div>
               <div className="structure-btn-checkout">

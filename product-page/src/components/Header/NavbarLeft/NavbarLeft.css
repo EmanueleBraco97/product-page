@@ -6,6 +6,10 @@
   border-bottom: 1px solid gray;
 }
 
+.menu-nav-responsive {
+  display: none;
+}
+
 ul {
   list-style: none;
   display: flex;
@@ -37,4 +41,19 @@ button {
 
 button:hover {
   color: black;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  ul {
+    display: none;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  .nav-left {
+    justify-content: space-around;
+  }
+  .menu-nav-responsive {
+    display: block;
+  }
 }
