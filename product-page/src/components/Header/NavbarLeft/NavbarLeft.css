@@ -19,7 +19,7 @@ ul {
   height: 100%;
 }
 
-li {
+.list-navbar {
   color: #b6bcc8;
   cursor: pointer;
   height: 100%;
@@ -44,6 +44,9 @@ button:hover {
 }
 
 @media (min-width: 300px) and (max-width: 768px) {
+  .logo {
+    width: 110px;
+  }
   ul {
     display: none;
   }
@@ -52,8 +55,9 @@ button:hover {
 @media (min-width: 300px) and (max-width: 768px) {
   .nav-left {
     justify-content: space-around;
+    border: none;
   }
   .menu-nav-responsive {
-    display: block;
+    display: flex;
   }
 }

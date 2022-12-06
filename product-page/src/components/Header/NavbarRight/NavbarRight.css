@@ -32,3 +32,10 @@ button {
   border-color: #ff7d1a;
   border-radius: 40%;
 }
+
+@media (min-width: 300px) and (max-width: 768px) {
+  .nav-right {
+    column-gap: 10px;
+    border: none;
+  }
+}

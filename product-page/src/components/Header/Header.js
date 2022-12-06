@@ -5,7 +5,7 @@ import NavbarRight from "./NavbarRight/NavbarRight";
 const Header = () => {
   return (
     <header>
-      <nav>
+      <nav className="nav">
         <NavbarLeft />
         <NavbarRight />
       </nav>
