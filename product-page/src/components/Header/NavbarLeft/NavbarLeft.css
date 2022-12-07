@@ -61,3 +61,9 @@ button:hover {
     display: flex;
   }
 }
+
+@media (min-width: 769px) and (max-width: 1099px) {
+  .nav-left {
+    width: 67%;
+  }
+}

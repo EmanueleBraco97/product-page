@@ -16,6 +16,10 @@ const DataProduct = () => {
   const Globalstate = useContext(Cartcontext);
   const dispatch = Globalstate.dispatch;
 
+  useEffect(() => {
+    setProduct((prevValue) => prevValue);
+  }, []);
+
   const handleIncrement = (index) => {
     setQuantity((quantity) => quantity + 1);
     dispatch({
