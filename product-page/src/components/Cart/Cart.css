@@ -56,11 +56,11 @@ p {
 
 @media (min-width: 300px) and (max-width: 768px) {
   .cart {
-    left: -170px;
+    left: -175px;
   }
 
   .card {
-    width: 306px;
+    width: 296px;
   }
 }
 

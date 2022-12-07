@@ -4,6 +4,8 @@ import { Cartcontext } from "../../../context/Context";
 
 import iconPlus from "../../../img/icon-plus.svg";
 import iconMinus from "../../../img/icon-minus.svg";
+import iconNext from "../../../img/icon-next.svg";
+import iconPrevious from "../../../img/icon-previous.svg";
 
 import "./DataProduct.css";
 
@@ -53,6 +55,22 @@ const DataProduct = () => {
                 src={item.image}
                 alt="imageProduct"
               ></img>
+
+              <div className="circle-previous">
+                <img
+                  className="icon-previous-responsive"
+                  src={iconPrevious}
+                  alt="previous"
+                ></img>
+              </div>
+
+              <div className="circle-next">
+                <img
+                  className="icon-next-responsive"
+                  src={iconNext}
+                  alt="next"
+                ></img>
+              </div>
 
               <div className="other-photo-product">
                 <img
